@@ -1,0 +1,43 @@
+#experience {
+  #modal-delete {
+    .overlay {
+      z-index: 1;
+      top: 0;
+      left: 0;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      background: rgba(40, 50, 82, 0.6);
+      border-radius: var(--radius-05);
+    }
+    .modal {
+      position: fixed;
+      width: auto;
+      top: 40%;
+      left: 43%;
+      z-index: 10;
+      background-color: white;
+      padding: 3rem;
+      border-radius: var(--radius-05);
+
+      .body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0;
+
+        .icon {
+          color: red;
+          font-size: 5rem;
+        }
+      }
+
+      .footer {
+        display: flex;
+        flex-direction: row;
+        margin-top: 2rem;
+        gap: 2rem;
+      }
+    }
+  }
+}

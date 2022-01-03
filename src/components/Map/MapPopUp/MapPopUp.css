@@ -1,0 +1,19 @@
+.map-popup-cotainer {
+  max-width: 240px;
+  transform: translate(-50%, -100%) translate(428px, 236px);
+}
+
+.mapboxgl-popup .mapboxgl-popup-content {
+  border: 1px solid #e5e5e5;
+  box-shadow: -1px 3px 10px 0 rbg(0 0 0 /6%);
+  padding: 5rem;
+  border-radius: 0.5rem;
+}
+
+.mapboxgl-popup-close-button {
+  width: 50px;
+  height: 50px;
+}
+
+.map-location {
+}

@@ -1,0 +1,131 @@
+.place-booking-page {
+  width: 100%;
+  height: 100%;
+}
+
+.place-booking-page .place-booking-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.place-booking-page .place-booking-header .icon {
+  font-size: 2rem;
+}
+
+.place-booking-page .card-colum {
+  border: 1px solid #e5e5e5;
+  border-radius: 0.75rem;
+  height: 100%;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+
+/*====================================================================
+ COLUM LEFT
+====================================================================*/
+.place-booking-page section {
+  margin-top: 1.5rem;
+}
+
+.place-booking-page .title-section {
+  margin-bottom: 1.5rem;
+}
+
+/*====================================================================
+ COLUM RIGT
+====================================================================*/
+/* Header card info experience */
+.place-booking-page .booking-resume .resume-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.place-booking-page .resume-card .resume-image img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.place-booking-page .resume-card .info {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.place-booking-page .resume-card .info p {
+  font-size: 0.9rem;
+}
+.place-booking-page .resume-card .info .review-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Price breakdown */
+.place-booking-page .booking-resume .head > span {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #283252;
+  display: inline-block;
+}
+
+.place-booking-page .booking-resume .head > span small {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #3f4f66;
+}
+
+.place-booking-page .booking-resume .price-breakdown {
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.place-booking-page .booking-resume .price-breakdown .price-breakdown-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.place-booking-page
+  .booking-resume
+  .price-breakdown
+  .price-breakdown-line:first-child {
+  border-top: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.place-booking-page
+  .booking-resume
+  .price-breakdown
+  .price-breakdown-line-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.place-booking-page
+  .booking-resume
+  .price-breakdown
+  .price-breakdown-line-total
+  small {
+  font-size: 00.95rem;
+  font-weight: 400;
+}
+
+/* Stripe */
+.place-booking-page .card-container {
+  background-color: #e5e5e5;
+  padding: 2rem;
+}

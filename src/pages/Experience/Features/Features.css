@@ -1,0 +1,33 @@
+.experience-page-features {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.experience-page-features .feature {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.experience-page-features .feature:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.experience-page-features .feature .content {
+  margin-left: 0.75rem;
+}
+
+.experience-page-features .feature .content span {
+  display: block;
+}
+.experience-page-features .feature .content span:nth-child(2) {
+  font-size: 0.9rem;
+  color: #3f4f66;
+}
+
+.experience-page-features .feature .content span:first-child {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #283252;
+}

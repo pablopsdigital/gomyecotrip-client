@@ -1,0 +1,351 @@
+/*====================================================================
+ Card calendar 
+====================================================================*/
+.experience-page-booking-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow: visible;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+}
+
+.experience-page-booking-card .head > span {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #283252;
+  display: inline-block;
+}
+
+.experience-page-booking-card .head > span small {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #3f4f66;
+}
+
+/*Toggle container*/
+.experience-page-booking-card .toggle-container {
+  background-color: rgba(10, 10, 10, 0.02);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/*====================================================================
+ Price breakdown
+====================================================================*/
+.experience-page-booking-card .price-breakdown {
+  margin-top: 1.5rem;
+  padding: 1rem;
+}
+
+.experience-page-booking-card .price-breakdown .price-breakdown-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.experience-page-booking-card .price-breakdown .price-breakdown-line:first-child {
+  border-top: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.experience-page-booking-card .price-breakdown .price-breakdown-line span {
+  color: rgb(158, 152, 152);
+  font-size: 0.8rem;
+}
+
+.experience-page-booking-card .price-breakdown .price-breakdown-line-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-top: 1px solid #e5e5e5;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.experience-page-booking-card .price-breakdown .price-breakdown-line-total small {
+  font-size: 00.95rem;
+  font-weight: 400;
+}
+
+/*Footer*/
+.experience-page-booking-card .footer-booking-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/*====================================================================
+Inputs dates and people
+====================================================================*/
+.experience-page-booking-card .inputs-date-people-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem 0;
+  border: 1px solid #b8b8b8;
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+
+.experience-page-booking-card .inputs-date-people-container .box:first-child {
+  border-right: 1px solid #b8b8b8;
+}
+
+.experience-page-booking-card .inputs-date-people-container .box {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  padding: 0.75rem 2rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+.experience-page-booking-card .inputs-date-people-container .box:last-child {
+  padding-left: 2rem;
+}
+
+.experience-page-booking-card .inputs-date-people-container .box:active {
+  border: 3px solid var(--primary);
+  border-radius: 0.5rem;
+}
+
+.experience-page-booking-card .inputs-date-people-container .box p {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #3f4f66;
+}
+
+/* icon */
+.experience-page-booking-card .inputs-date-people-container .box .icon {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-right: 1rem;
+  transition: all 0.3s;
+}
+
+/*====================================================================
+Dates modal
+====================================================================*/
+.modal-dates-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+}
+
+.modal-dates-container .modal-dates-panel {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  top: -28rem;
+  left: -100px;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.modal-dates-container .modal-dates-panel .modal-dates-panel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+
+/*Button*/
+
+.modal-dates-container .modal-dates-panel .footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.modal-dates-container .modal-dates-panel .modal-dates-footer .button-modal-dates {
+  background-color: #671cc9;
+  border-color: transparent;
+  color: #fff;
+  height: 3em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.modal-dates-container .modal-dates-panel .modal-dates-footer .button-modal-dates-light {
+  background-color: #f5f5f5;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+  height: 3em;
+  padding-left: 1.75em;
+  padding-right: 1.75em;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+// Calendar
+.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root,
+.modal-dates-container .css-169iwlq-MuiCalendarPicker-root {
+  font-family: 'Poppins';
+  font-weight: var(--weight-regular);
+}
+
+.modal-dates-container .modal-dates-panel.css-188yni7-MuiPickersDay-root {
+  font-family: 'Poppins';
+}
+
+.modal-dates-container .modal-dates-panel .css-1dozdou {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.modal-dates-container .modal-dates-panel .css-dhopo2 {
+  min-height: 250px !important;
+}
+
+.modal-dates-container
+  .modal-dates-panel
+  .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected,
+.modal-dates-container
+  .modal-dates-panel
+  .css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+}
+
+.css-195y93z-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+/*====================================================================
+People modal
+====================================================================*/
+.modal-people-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1.5rem;
+}
+
+.modal-people-container .modal-people-panel {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  top: -28rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.modal-people-container .modal-people-panel .modal-people-panel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+}
+
+/* Blocks types inputs*/
+.modal-people-container .modal-people-panel .type-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-people-container .modal-people-panel .type-block:first-child {
+  border-top: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* Info */
+.modal-people-container .modal-people-panel .type-block .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.type-block .info span:nth-child(2) {
+  font-size: 0.9rem;
+  color: #a2a5b9;
+}
+
+/*Buttons +- cantidades*/
+.type-block .action .spinner {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.type-block .action .spinner button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+  background: none;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.type-block .action .spinner button:hover {
+  border: 2px solid var(--primary);
+}
+
+.type-block .action .spinner button.is-inactive {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Input field */
+.type-block .action .spinner input {
+  border: none;
+  font-weight: 600;
+  width: 60px;
+  text-align: center;
+  padding: 0;
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*Button*/
+
+.modal-people-container .modal-people-panel .footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}

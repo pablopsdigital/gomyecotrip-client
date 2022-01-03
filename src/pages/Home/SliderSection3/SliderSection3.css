@@ -1,0 +1,102 @@
+.more-listings {
+  padding: 3rem 0 0 0;
+}
+.more-listings .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin-bottom: 0px;
+}
+
+.more-listings .listings {
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.more-listings .listings .listings-inner .experience {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.experience-image {
+  background-image: url('https://dummyimage.com/640x960');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more-listings .listings .listings-inner .experience .experience-image {
+  position: relative;
+  border-radius: 0.75rem;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.more-listings .listings .listings-inner .experience .experience-image .action-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.more-listings .listings .listings-inner .experience .experience-image .action-bar .button {
+  background: none;
+  border: none;
+  padding: 0 0.75rem 0 0.75rem;
+  border-radius: 8px;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.more-listings .listings .listings-inner .experience .experience-content {
+  padding: 0.75rem 0;
+}
+
+.more-listings .listings .listings-inner .experience .experience-content .experience-rating {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #283252;
+}
+
+.more-listings .listings .listings-inner .experience .experience-content .listing-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.25rem 0;
+}
+
+.more-listings .listings .listings-inner .experience .experience-content .experience-rating {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: #283252;
+}
+
+.more-listings .listings .listings-inner .experience .experience-content .listing-price {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #a2a5b9;
+}
+
+.experience-rating .rating-value {
+  font-weight: 700;
+  color: #283252;
+}
+
+.experience-rating .start-icon {
+  font-size: 1.25rem;
+  color: #ffb536;
+}
+.experience-rating .px-2 {
+  padding: 0.5rem;
+}
+
+.listing-price .price-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #283252;
+}

@@ -1,0 +1,102 @@
+#signup-page.signup-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  /* Column left */
+  .column-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .container-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+
+      .resgister-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        img {
+          width: 3rem;
+        }
+        h2 {
+          margin-top: 2rem;
+          font-size: 2rem;
+          line-height: 1.5;
+        }
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .signup-form-container {
+        width: 100%;
+        margin-top: 3rem;
+
+        .field-icon-container {
+          position: relative;
+          .input {
+            height: 50px;
+            margin-bottom: 1rem;
+            padding-left: 44px;
+            width: 100%;
+            background-color: #fff;
+            border-color: #e5e5e5;
+            border-radius: 0.25rem;
+            color: #363636;
+          }
+          .form-icon {
+            position: absolute;
+            top: 0;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #a2a5b9;
+            -webkit-transition: color 0.3s;
+            transition: color 0.3s;
+
+            .form-icon:first-child {
+              height: 20px;
+              width: 20px;
+            }
+          }
+        }
+
+        .footer-signup {
+          margin-top: 1rem;
+        }
+      }
+
+      .toggle-switch-container {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  /* Column right */
+  .column-right {
+    min-height: 100vh;
+    width: 60%;
+    display: flex;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}

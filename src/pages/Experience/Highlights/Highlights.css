@@ -1,0 +1,62 @@
+/* Listing participation */
+.experience-page-highlights {
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.experience-page-highlights .title-section {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.experience-page-highlights .highlight-boxes {
+  padding: 1.5rem 0;
+}
+
+.experience-page-highlights .highlight-boxes .highlight-boxes-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience-page-highlights
+  .highlight-boxes
+  .highlight-boxes-columns
+  .highlight-box {
+  border: 1px solid #e5e5e5;
+  border-radius: 0.75rem;
+  height: 100%;
+  padding: 1.5rem;
+  flex-direction: column;
+  margin: 2rem;
+}
+
+.experience-page-highlights
+  .highlight-boxes
+  .highlight-boxes-columns
+  .highlight-box:first-child,
+.experience-page-highlights
+  .highlight-boxes
+  .highlight-boxes-columns
+  .highlight-box:last-child {
+  margin: 0;
+}
+
+.experience-page-highlights
+  .highlight-boxes
+  .highlight-box
+  .icon-participation {
+  font-size: 2.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-page-highlights .highlight-boxes .highlight-box > p {
+  padding: 1rem 0;
+}
+
+.experience-page-highlights .highlight-boxes .highlight-box .colorlink {
+  color: #671cc9;
+  font-weight: 600;
+  cursor: pointer;
+}

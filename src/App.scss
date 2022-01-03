@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #671cc9;
+  --primary-hover: #4d1299;
+
+  --bg-primary: #f5f6fa;
+  --bg-white: #ffffff;
+
+  /* Radius */
+  --radius-025: 0.25em;
+  --radius-05: 0.5em;
+  --radius-total: 100em;
+
+  /* Text */
+  --text-black: #111827;
+  --text-white: #ffffff;
+  --text-primary: var(--primary);
+
+  --gray-primary: #6b7280;
+  --gray-secondary: #455560;
+  --gray-ternary: #f4f5f7;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-blod: 600;
+
+  --info: #0288d1;
+  --success: #2e7d32;
+  --warning: #ed6c02;
+  --error: #d32f2f;
+  --default: #ebebeb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--background-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1600px;
+  flex-grow: 1;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+input,
+select,
+textarea,
+.input-date {
+  display: block;
+  width: 100%;
+  border: 1px solid rgb(229, 231, 235);
+  background-color: white;
+  height: 3.5rem;
+  padding: 0 1rem 0 1rem;
+  // padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+  }
+}
+
+textarea {
+  height: 200px;
+  padding: 1rem 1rem;
+}
+
+//=================================================================
+//Pages admin
+//=================================================================
+
+.header-admin-page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border: none;
+  background-color: transparent;
+}
+//Tables
+
+.container-table {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1px solid rgb(229, 231, 235);
+
+  table {
+    width: 100%;
+    white-space: nowrap;
+    border: 1px solid rgb(229, 231, 235);
+
+    thead {
+      font-weight: var(--weight-medium);
+      text-align: left;
+      color: #64748b;
+      text-transform: uppercase;
+      border: 1px solid rgb(229, 231, 235);
+      background-color: rgba(229, 231, 235, 0.5);
+      height: 50px;
+
+      th {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+      }
+    }
+
+    td,
+    th {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    tbody {
+      background-color: white;
+      font-size: 0.9rem;
+
+      .col-1 {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        .image {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 100px;
+        }
+      }
+
+      .types-experiences {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 0.5;
+        width: 300px;
+        gap: 1rem;
+      }
+
+      .booked {
+        background-color: rgb(69, 148, 33);
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        text-transform: capitalize;
+        border: none;
+      }
+
+      .cancel {
+        background-color: rgb(233, 71, 71);
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        text-transform: capitalize;
+        border: none;
+      }
+
+      .completed {
+        background-color: rgb(199, 197, 197);
+        border: none;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        text-transform: capitalize;
+        cursor: auto;
+      }
+
+      .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+
+        button {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          border: none;
+        }
+
+        .delete {
+          background-color: red;
+          color: white;
+          &:hover {
+            background-color: rgb(126, 36, 36);
+          }
+        }
+
+        .edit {
+          background-color: var(--primary);
+          color: white;
+          &:hover {
+            background-color: var(--primary-hover);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+    background-color: white;
+    border: 1px solid rgb(229, 231, 235);
+  }
+}

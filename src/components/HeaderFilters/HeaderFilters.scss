@@ -1,0 +1,180 @@
+.header-filters {
+  background-color: #ffffff;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  z-index: 9;
+  box-shadow: rgb(0 0 0 /8%) 0px 1px 12px !important;
+  transition: all 0.3s;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.header-filters .buttons-filter {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.3s;
+  gap: 1rem;
+  margin-left: 2rem;
+
+  .button-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 50px;
+    padding: 0 1rem;
+    height: 2.5rem;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+    cursor: pointer;
+    justify-content: center;
+    transition: all 0.3;
+
+    button {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+  }
+  .button-active {
+    border: 2px solid #671cc9 !important;
+    padding: 0 0.5rem 0 1rem;
+    color: var(--primary);
+    .icon {
+      color: var(--primary);
+    }
+  }
+}
+
+/*====================================================================
+Modales
+====================================================================*/
+.modal-container {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+}
+
+.modal-panel-cancelation {
+  position: relative;
+  width: 400px;
+  height: auto;
+  top: -10px;
+  left: 30px;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.modal-panel-price {
+  position: relative;
+  width: 400px;
+  height: auto;
+  top: -10px;
+  left: 30px;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.modal-panel-duration {
+  position: relative;
+  width: 400px;
+  height: auto;
+  top: -5px;
+  left: 150px;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.modal-panel-type {
+  position: relative;
+  width: 550px;
+  height: auto;
+  top: -5px;
+  left: 280px;
+  background: #fff;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.modal-container .modal-panel-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 2rem;
+}
+
+.modal-footer-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5rem;
+}
+
+#filter-type,
+.modal-panel-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+  }
+
+  .header {
+  }
+
+  .body {
+    width: 100%;
+  }
+
+  .container-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  input[type='checkbox'] {
+    border: 1px solid rgb(229, 231, 235);
+    width: 17px;
+    height: 17px;
+    margin-top: 0;
+    margin-bottom: 0;
+    &:checked {
+    }
+  }
+  .footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+.experience-page-detail-hosted {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  .col-left {
+    .title {
+      font-size: 1.25rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    p {
+      color: #283252;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  img {
+    display: block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+}

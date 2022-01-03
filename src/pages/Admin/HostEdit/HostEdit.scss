@@ -1,0 +1,63 @@
+#host-profile.content-page {
+  background-color: #f9f1fb;
+  padding: 0;
+  min-height: 100%;
+
+  .header {
+    margin-bottom: 2rem;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .form {
+    width: 800px;
+  }
+  .grid-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    .input-image {
+      width: 200px;
+      input {
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 0.8rem;
+        font-style: italic;
+        color: #7c787c;
+      }
+    }
+
+    .col-right {
+      margin-left: 5rem;
+      width: 800px;
+    }
+  }
+
+  .footer {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .col-right {
+    margin-left: 5rem;
+    width: 800px;
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}

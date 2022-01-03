@@ -1,0 +1,89 @@
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+
+  .signin-head {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .signin-brand {
+    width: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .signin-head p {
+    color: #3f4f66;
+    margin-top: 2rem;
+  }
+
+  .signin-new {
+    font-weight: 700;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+
+  /* Form */
+  .form-container {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 16px;
+    width: 100%;
+
+    .field:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+
+    .field .field-icon {
+      position: relative;
+    }
+
+    .field .field-icon .input {
+      padding-left: 44px;
+      box-shadow: none;
+      border-radius: 0.5rem;
+      width: 100%;
+      max-width: 100%;
+      background-color: white;
+      border: 1px solid #e5e5e5;
+      color: #363636;
+      transition: all 0.3s;
+      height: 3rem;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .form-icon {
+      position: absolute;
+      top: 0px;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #a2a5b9;
+      transition: color 0.3s;
+    }
+  }
+
+  .input::-webkit-input-placeholder,
+  .input::placeholder {
+    color: #a2a5b9;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .toggle-switch-container {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}

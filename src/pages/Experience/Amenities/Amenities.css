@@ -1,0 +1,35 @@
+.listing-requirements:not(:last-child),
+.listing-amenities:not(:last-child) {
+  padding-bottom: 2rem;
+}
+
+.experience-page-amenities .title-section {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+
+.experience-page-amenities .amenities-list {
+  padding: 1.5rem 0;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.experience-page-amenities .amenities-list .amenities-item {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0.5rem;
+  width: calc(50% - 1rem);
+}
+
+.experience-page-amenities .amenities-item .icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  min-width: 32px;
+  margin-right: 0.75rem;
+  font-size: 1.25rem;
+  color: var(--primary);
+}

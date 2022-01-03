@@ -1,0 +1,30 @@
+.review-start-and-count {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-weight: var(--weight-medium);
+  .review-start-and-count {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .start-icon {
+    margin-right: 0.25rem;
+    font-size: 1.5rem;
+    color: #ffb536;
+  }
+
+  .review-values {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    font-weight: var(--weight-medium);
+    color: var(--gray-primary);
+
+    .count {
+      color: var(--gray-primary);
+      font-weight: var(--weight-light);
+      margin-left: 0.25rem;
+    }
+  }
+}

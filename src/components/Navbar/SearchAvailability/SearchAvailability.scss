@@ -1,0 +1,100 @@
+#search_availability.search_availability form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  border-radius: 50px;
+  gap: 1rem;
+
+  .button-search {
+    height: 3rem;
+    width: 3rem;
+    padding-top: 0.4rem;
+    padding-left: 0.1rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    border: none;
+    vertical-align: middle;
+    cursor: pointer;
+
+    .search-icon {
+      color: white;
+      font-size: 25px;
+    }
+
+    &:hover {
+      background-color: var(--primary-hover);
+      .search-icon {
+        color: white;
+      }
+    }
+  }
+
+  .container-input {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    #search_availability.search_availability form input,
+    #search_availability.search_availability form select {
+      width: 100% !important;
+    }
+
+    //Material inputs
+    .MuiFormControl-marginNormal {
+      margin-top: 0;
+      margin-bottom: 0;
+      border: 1px solid rgb(229, 231, 235);
+      border-radius: 0.5rem;
+    }
+
+    .MuiInputBase-root {
+      display: flex;
+      align-items: center;
+      width: 180px;
+      font-family: 'Poppins';
+    }
+
+    .MuiInput-underline:before {
+      border-bottom: none;
+    }
+
+    .MuiInput-underline:after {
+      border: none;
+    }
+
+    //Old mui
+
+    .css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+      font-family: 'Poppins';
+      width: 200px;
+      &:focus {
+        border: none;
+        outline: none;
+        box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+      }
+    }
+
+    .css-i4bv87-MuiSvgIcon-root {
+      color: var(--primary);
+    }
+
+    .css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root:hover {
+      background-color: none !important;
+    }
+
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+      border: 1px solid rgb(229, 231, 235);
+      border-radius: 0.5rem;
+    }
+
+    input,
+    select {
+      margin-top: 0;
+      margin-bottom: 0;
+      height: 3rem;
+      padding: 0 1rem 0 1rem;
+    }
+  }
+}

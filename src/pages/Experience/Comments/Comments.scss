@@ -1,0 +1,66 @@
+.experience-page-comments {
+  margin: 4rem 0;
+  padding: 3rem 0;
+  border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+}
+
+.experience-page-comments .head-comments {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.15rem;
+  margin: 2rem 0;
+  margin-top: 0;
+}
+
+.experience-page-comments .comments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.experience-page-comments .comments .comment {
+  max-width: 440px;
+}
+
+.experience-page-comments .comments .comment .comment-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.experience-page-comments a {
+  color: #485fc7;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.experience-page-comments .comments .comment .comment-head > a img {
+  display: block;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.experience-page-comments .comments .comment .comment-head .info {
+  margin-left: 1rem;
+}
+
+.experience-page-comments .comments .comment .comment-head .info span {
+  color: #a2a5b9;
+  font-size: 0.95rem;
+}
+
+.experience-page-comments .comments .comment > p {
+  color: #a2a5b9;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}

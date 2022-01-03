@@ -1,0 +1,41 @@
+/* listing content */
+.experience-page-content {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.experience-page-content .title-section {
+  font-size: 1.25rem;
+}
+
+.translate-block {
+  margin: 2rem 0 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e5e5;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.experience-page-content p {
+  color: #3f4f66;
+  margin-bottom: 1rem;
+}
+
+.underlink {
+  position: relative;
+  font-weight: 700;
+  color: #671cc9;
+  margin-bottom: 3rem;
+}
+
+.underlink:after {
+  content: '' !important;
+  border-bottom: 1px solid #671cc9 !important;
+  bottom: -2px !important;
+  left: 0px !important;
+  position: absolute !important;
+  width: 100% !important;
+}

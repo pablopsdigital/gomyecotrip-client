@@ -1,0 +1,27 @@
+#experience-page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  .sticky-outer {
+    height: 100%;
+  }
+  .sticky-wrapper {
+    position: sticky;
+    top: 100px;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    padding-right: 1px;
+  }
+  .two-colums-container {
+    display: flex;
+    gap: 2rem;
+
+    .col-8 {
+      width: 66.66%;
+    }
+
+    .col-4 {
+      width: 33.33%;
+    }
+  }
+}

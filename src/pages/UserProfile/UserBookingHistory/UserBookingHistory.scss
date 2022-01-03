@@ -1,0 +1,67 @@
+#user-booking-history {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+
+#modal {
+  .modal {
+    position: absolute;
+    width: 700px;
+    background-color: white;
+    border: 1px solid var(--gray-ternary);
+    border-radius: 0.5rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    padding: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    min-height: 10%;
+    max-height: 80%;
+
+    .modal-body {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      .input-container {
+        margin-top: 2rem;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .modal-footer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
+    input[type='radio'] {
+      width: 20px;
+      display: flex;
+      height: 24px;
+      flex-direction: column;
+      border: 1px solid #e5e7eb;
+      background-color: white;
+      padding: 0 1rem 0 1rem;
+      border-radius: 0.5rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid red;
+    }
+  }
+}

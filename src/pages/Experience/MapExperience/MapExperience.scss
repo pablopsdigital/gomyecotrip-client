@@ -1,0 +1,35 @@
+.map-card-info {
+  width: 260px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.map-card-info .map-card-header img {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.25rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.map-card-info .map-card-body h1 {
+  font-size: 1rem;
+}
+
+.marker-label {
+  background-color: #ffffff;
+  border-radius: 2rem;
+  color: #53268f;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem !important;
+  font-weight: 600;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.1), 0 5px 5px -5px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e5e5;
+}
+
+/* .marker-label:hover {
+  background-color: #53268f;
+  color: #ffffff;
+} */

@@ -1,0 +1,57 @@
+#booking-card {
+  .booking-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 25px 20px -20px;
+
+    p {
+      color: #375141;
+    }
+
+    img {
+      width: 150px;
+      object-fit: cover;
+      height: 100px;
+      border-radius: 0.5rem;
+    }
+
+    .booked {
+      background-color: rgb(69, 148, 33);
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      text-transform: capitalize;
+      border: none;
+    }
+
+    .cancel {
+      background-color: rgb(233, 71, 71);
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      text-transform: capitalize;
+      border: none;
+    }
+
+    .completed {
+      background-color: rgb(207, 207, 207);
+      margin-top: 1rem;
+      border: none;
+      padding: 0.5rem 1rem;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+}

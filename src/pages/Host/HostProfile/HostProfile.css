@@ -1,0 +1,84 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+.profile-head .profile-title {
+  font-weight: 700;
+  color: #363636;
+  text-align: left;
+}
+
+.profile-content {
+  padding: 1.5rem 3rem;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 1rem;
+  width: 100%;
+  min-height: 200px;
+}
+
+.profile-content .profile-inputs-container {
+  width: 100%;
+  padding: 1.5rem;
+  flex-grow: 1;
+  max-height: 100%;
+}
+
+.profile-content .profile-inputs-container .input-section {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.profile-content .label-container {
+  width: 25%;
+}
+
+.profile-content .input-container {
+  width: 75%;
+}
+
+.profile-content .input-container input {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  height: 4rem;
+  border: 1px solid #d5d6d7;
+  border-radius: 0.5rem;
+}
+
+.profile-content .input-container textarea {
+  width: 100%;
+  padding: 0.25rem 0.75rem;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  height: 10rem;
+  border: 1px solid #d5d6d7;
+  border-radius: 0.5rem;
+}
+
+.profile-content .profile-hosted-head {
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+}
+
+.profile-content .profile-footer {
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+
+  flex-direction: row-reverse;
+}

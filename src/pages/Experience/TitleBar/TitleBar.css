@@ -1,0 +1,28 @@
+.experience-page-title-bar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.experience-page-title-bar .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience-page-title-bar .left .title {
+  margin: 0px;
+}
+
+.experience-page-title-bar .right {
+  display: flex;
+  -ms-flex-pack: end;
+}
+.experience-page-title-bar .right a {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  font-weight: 500;
+  color: #283252;
+}

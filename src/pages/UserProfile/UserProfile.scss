@@ -1,0 +1,52 @@
+#user-edit {
+  .content-page {
+    background-color: #f9f1fb;
+    padding: 0;
+    min-height: 100%;
+
+    .header {
+      margin-bottom: 2rem;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+    }
+
+    .body {
+      .row-inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+        input {
+          height: 25px;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+
+    .footer {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .form {
+      width: 700px;
+    }
+
+    .col-right {
+      margin-left: 5rem;
+      width: 800px;
+    }
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+}

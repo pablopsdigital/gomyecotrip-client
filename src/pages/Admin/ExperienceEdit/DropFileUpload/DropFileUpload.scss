@@ -1,0 +1,25 @@
+#drop-file-upload {
+  width: 100%;
+
+  .input-files {
+    background-color: transparent;
+    padding: 3rem;
+    border: 2px dashed rgb(161, 159, 159);
+    border-radius: 0.5rem;
+    text-align: center;
+    .icon {
+      font-size: 4rem;
+    }
+  }
+
+  .images-preview {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    img {
+      max-width: 100px;
+    }
+  }
+}

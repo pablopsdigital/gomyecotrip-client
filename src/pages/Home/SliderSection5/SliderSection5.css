@@ -1,0 +1,96 @@
+.more-listings {
+  padding: 3rem 0 0 0;
+}
+.more-listings .title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin-bottom: 0px;
+}
+
+.more-listings .listings {
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.more-listings .listings .listings-inner .listing {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+}
+
+.listing-image {
+  background-image: url('https://dummyimage.com/640x960');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more-listings .listings .listings-inner .listing .listing-image {
+  position: relative;
+  border-radius: 0.75rem;
+  height: 280px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.more-listings .listings .listings-inner .listing .listing-image .list-item-image img {
+  border-radius: 0.75rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.more-listings .listings .listings-inner .listing .listing-image .action-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.more-listings .listings .listings-inner .listing .listing-image .action-bar .button {
+  background: none;
+  border: none;
+  padding: 0 0.75rem 0 0.75rem;
+  border-radius: 8px;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+.more-listings .listings .listings-inner .listing .listing-content .listing-name {
+  max-height: 40px;
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+}
+
+.more-listings .listings .listings-inner .listing .listing-content .listing-price {
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #a2a5b9;
+}
+
+.more-listings .listings .listings-inner .listing .listing-content .title {
+  font-size: 1.25rem;
+  color: black;
+}
+
+.listing-price .price-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #283252;
+}

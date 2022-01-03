@@ -1,0 +1,43 @@
+.categorie-card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 0.75rem;
+  width: 100%;
+  overflow: hidden;
+  height: 280px;
+
+  .categorire-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#671cc9, 0.3);
+    z-index: 1;
+  }
+
+  .categorire-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    color: white;
+    min-height: 260px;
+    z-index: 2;
+    display: flex;
+
+    .button-link {
+      background-color: white;
+      color: var(--primary);
+      height: 2.5rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      &:hover {
+        background-color: var(--primary);
+        color: white;
+      }
+    }
+  }
+}

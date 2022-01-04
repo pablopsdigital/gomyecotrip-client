@@ -4,8 +4,8 @@ import Brand from '../../resources/svg/gomyecotrip-symbol.svg';
 import {Link} from 'react-router-dom';
 
 // Icons
-import iconSetGomyectrip from '../../resources/icons/icon-set-gomyectrip/selection.json';
-import IcomoonReact, {iconList} from 'icomoon-react';
+import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 //Components
 import SearchAvailability from './SearchAvailability/SearchAvailability';
@@ -71,19 +71,13 @@ export default function Navbar() {
             <MenuLink to="/host/welcome">offers an experience</MenuLink>
           )}
           <Avatar onClick={() => setModalOpen(true)}>
-            <IcomoonReact
-              iconSet={iconSetGomyectrip}
-              color="#671cc9"
-              size={25}
-              icon="align-justify"
-            />
-
+            <MenuIcon />
             {userInfo ? (
               <div className="avatar">
                 <img src={userInfo.imageAvatar} />
               </div>
             ) : (
-              <IcomoonReact iconSet={iconSetGomyectrip} color="#671cc9" size={25} icon="user" />
+              <AccountCircleIcon />
             )}
           </Avatar>
 

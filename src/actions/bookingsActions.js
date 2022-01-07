@@ -39,3 +39,11 @@ export const getOneBookingForId = async (bookingId) => {
   const url = `${apiVersionUrl}/bookings/${bookingId}`;
   return await axiosClient.get(url, {headers});
 };
+
+export const payStripe = async (queryData) => {
+  const {token} = JSON.parse(localStorage.getItem('userInfo'));
+  const headers = {Authorization: `Bearer ${token}`};
+
+  const url = `${apiVersionUrl}/payments/session-id`;
+  return await axiosClient.post(url, queryData, {headers});
+};

@@ -21,6 +21,7 @@ import {
   KeyboardDatePicker,
   KeyboardTimePicker
 } from '@material-ui/pickers';
+import {payStripe} from '../../../actions/bookingsActions';
 
 export default function BookingForm({experience, ...props}) {
   //===========================================================================
@@ -154,7 +155,7 @@ export default function BookingForm({experience, ...props}) {
       };
 
       //Request id pay transaction intent backend
-      const response = await axios.post(`/api/v1/payments/session-id`, queryData);
+      const response = await payStripe(queryData);
       setLoading(false);
 
       //Send stripe

@@ -31,8 +31,6 @@ export default function BookingForm({experience, ...props}) {
 
   const params = useParams();
   const {place, date, hour, id} = params;
-  // console.log('place', place);
-
   const experienceId = experience._id;
 
   //===========================================================================
@@ -73,16 +71,13 @@ export default function BookingForm({experience, ...props}) {
   const [hourModal, setHourModal] = useState('10:00');
 
   const handleDates = (newDate) => {
-    console.log('Date:', newDate);
     setDateModal(moment(newDate).format('DD-MM-YYYY'));
     // setModalDatesOpen(false);
-    // console.log('Con moment', moment(newDate).format('DD-MM-YYYY'));
   };
 
   const handleHour = (event) => {
     event.preventDefault();
     setHourModal(event.target.value);
-    console.log('Hour', event.target.value);
   };
 
   //===================================================================
@@ -123,6 +118,11 @@ export default function BookingForm({experience, ...props}) {
   const bookingStripeHandler = async (event) => {
     event.preventDefault();
 
+    //If the user is not logged in then login
+    if (!userInfo) {
+      navigate('/signin');
+    }
+
     const bookingDetails = {
       experience: experience._id,
       user: userInfo._id,
@@ -144,15 +144,8 @@ export default function BookingForm({experience, ...props}) {
       state: 'booked'
     };
 
-    console.log('Booking', bookingDetails);
-
     try {
       setLoading(true);
-
-      //If the user is not logged in then login
-      if (!userInfo) {
-        navigate('/signin');
-      }
 
       const queryData = {
         userId: userInfo._id,

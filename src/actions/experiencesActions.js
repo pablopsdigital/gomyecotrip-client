@@ -17,11 +17,11 @@ export const getAllExperiencesForHostAndAdmin = async ({hosted = ''}) => {
 };
 
 export const getDetailsExperienceById = async (experienceId) => {
-  const {token} = JSON.parse(localStorage.getItem('userInfo'));
-  const headers = {Authorization: `Bearer ${token}`};
+  // const {token} = JSON.parse(localStorage.getItem('userInfo'));
+  // const headers = {Authorization: `Bearer ${token}`};
 
   const url = `${apiVersionUrl}/experiences/${experienceId}`;
-  return await axiosClient.get(url, {headers});
+  return await axiosClient.get(url);
 };
 
 export const createExperience = async (experience) => {

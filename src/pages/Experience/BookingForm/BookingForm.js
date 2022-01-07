@@ -156,12 +156,13 @@ export default function BookingForm({experience, ...props}) {
 
       //Request id pay transaction intent backend
       const response = await payStripe(queryData);
+      // console.log('res', response);
       setLoading(false);
 
       //Send stripe
       const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
       const payIntent = stripe.redirectToCheckout({
-        sessionId: response.data.sessionId
+        sessionId: response.sessionId
       });
     } catch (error) {
       setError(error.message);

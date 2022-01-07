@@ -140,7 +140,7 @@ export default function Experience({...props}) {
           </div>
         </div>
       ) : (
-        <NoResultsFound />
+        !loading && <NoResultsFound />
       )}
 
       {/*Loading and errors */}

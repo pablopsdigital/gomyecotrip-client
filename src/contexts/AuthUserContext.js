@@ -6,6 +6,8 @@ import {localStorageManager} from '../services/localStorageManager';
 export const AuthUserContext = createContext();
 
 export default function AuthUserContextProvider({children}) {
+  localStorageManager.setItem('favorites', []);
+
   //================================================================
   //Load Data
   //================================================================

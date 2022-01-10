@@ -9,7 +9,7 @@ import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import useAuthUserContext from '../../hooks/useAuthUser';
 
 export default function ExperienceCard({experience, ...props}) {
-  // const {favorites, addFavorites} = useAuthUserContext();
+  const {favorites, addFavorites} = useAuthUserContext();
 
   // const handlerFavorite = () => {
   //   addFavorites(experience);

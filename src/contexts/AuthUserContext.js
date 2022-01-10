@@ -60,12 +60,12 @@ export default function AuthUserContextProvider({children}) {
     () => ({
       signin,
       signout,
-      favorites,
       addFavorites,
+      favorites,
       isAuth,
       userInfo
     }),
-    [signin, signout, isAuth, userInfo]
+    [signin, signout, addFavorites, favorites, isAuth, userInfo]
   );
 
   return <AuthUserContext.Provider value={value}>{children}</AuthUserContext.Provider>;

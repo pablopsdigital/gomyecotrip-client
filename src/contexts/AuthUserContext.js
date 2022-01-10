@@ -6,14 +6,14 @@ import {localStorageManager} from '../services/localStorageManager';
 export const AuthUserContext = createContext();
 
 export default function AuthUserContextProvider({children}) {
-  localStorageManager.setItem('favorites', []);
-
   //================================================================
   //Load Data
   //================================================================
   const [userInfo, setUserInfo] = useState(localStorageManager.getItem('userInfo'));
   const [isAuth, setIsAuth] = useState(localStorageManager.getItem('isAuth'));
-  const [favorites, setFavorites] = useState(localStorageManager.getItem('favorites'));
+  const [favorites, setFavorites] = useState(
+    localStorageManager.getItem('favorites') ? localStorageManager.getItem('favorites') : []
+  );
 
   //================================================================
   //Signin

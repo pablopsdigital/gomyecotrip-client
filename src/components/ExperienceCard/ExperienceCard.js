@@ -9,21 +9,20 @@ import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import useAuthUserContext from '../../hooks/useAuthUser';
 
 export default function ExperienceCard({experience, ...props}) {
-  const [isFavorite, setIsFavorite] = useState();
-  const {favorites, addFavorites} = useAuthUserContext();
+  // const {favorites, addFavorites} = useAuthUserContext();
 
-  const handlerFavorite = () => {
-    addFavorites(experience);
-  };
+  // const handlerFavorite = () => {
+  //   addFavorites(experience);
+  // };
 
   return (
     <li id="experience-vertical-card">
       <div className="experience-card">
         <div className="header-vertical-card">
           <div className="icon-container">
-            <IconButton className="icon" aria-label="add to favorites" onClick={handlerFavorite}>
+            {/* <IconButton className="icon" aria-label="add to favorites" onClick={handlerFavorite}>
               {!favorites.includes(experience._id) ? <FavoriteBorderIcon /> : <FavoriteIcon />}
-            </IconButton>
+            </IconButton> */}
           </div>
         </div>
         <div className="card-body">

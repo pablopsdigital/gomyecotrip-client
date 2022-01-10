@@ -22,7 +22,7 @@ export default function ExperienceCard({experience, ...props}) {
         <div className="header-vertical-card">
           <div className="icon-container">
             <IconButton className="icon" aria-label="add to favorites" onClick={handlerFavorite}>
-              {!favorites.includes(experience._id) ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+              {/* {!favorites.includes(experience._id) ? <FavoriteBorderIcon /> : <FavoriteIcon />} */}
             </IconButton>
           </div>
         </div>

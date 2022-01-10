@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './CategorieCard.scss';
 import styled from 'styled-components';
-import { Button } from '../Button';
+import {Button} from '../Button';
 
-export default function CategorieCard({ categorie, ...props }) {
+export default function CategorieCard({categorie, ...props}) {
   return (
     <div
       className="categorie-card"
       style={{
-        backgroundImage: `url(${categorie.image})`,
+        backgroundImage: `url(${categorie.image})`
       }}
     >
       <div className="categorire-overlay"></div>
@@ -19,7 +19,7 @@ export default function CategorieCard({ categorie, ...props }) {
           <p>{categorie.short}</p>
         </div>
         <div>
-          <Link className="button-link" to={categorie.url}>
+          <Link className="button-link" to={`/experiences?place=${categorie.url}`}>
             View all
           </Link>
         </div>

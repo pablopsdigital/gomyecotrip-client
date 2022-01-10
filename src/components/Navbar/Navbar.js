@@ -95,7 +95,7 @@ export default function Navbar() {
                   <Link to="/signup">Sign Up</Link>
                   <Link to="/signin">Sing In</Link>
                   <hr />
-                  <Link to="/">Offers an experience</Link>
+                  <Link to="/host/welcome">Offers an experience</Link>
                   <Link to="/support">Support</Link>
                 </>
               )}

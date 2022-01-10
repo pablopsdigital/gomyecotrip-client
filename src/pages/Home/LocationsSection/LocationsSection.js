@@ -74,7 +74,7 @@ export default function LocationsSection() {
   const CardLocation = ({location, ...props}) => {
     return (
       <div id="card-location">
-        <Link to={location.url} className="link-container">
+        <Link to={`/experiences?place=${location.url}`} className="link-container">
           <div>
             <img src={location.image} alt={location.name} />
           </div>

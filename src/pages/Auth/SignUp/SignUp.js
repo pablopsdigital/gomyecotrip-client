@@ -61,11 +61,11 @@ export default function SignUp(props) {
 
       try {
         const response = await signUpUser(firstName, lastName, email, password);
-        console.log('response', response);
+        // console.log('response', response);
         signin({userInfo: response.userInfo});
         setLoading(false);
       } catch (error) {
-        console.log(error.error);
+        // console.log(error.error);
         setError(error.error);
         setLoading(false);
       }

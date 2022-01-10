@@ -34,19 +34,19 @@ export default function Footer() {
               <h2>Services</h2>
               <ul>
                 <li>
-                  <Link to="/">Ecoexperiences</Link>
+                  <Link to="/experiences">Ecoexperiences</Link>
                 </li>
                 <li>
-                  <Link to="/">The project</Link>
+                  <Link to="/support">The project</Link>
                 </li>
                 <li>
-                  <Link to="/">Carrers</Link>
+                  <Link to="/support">Carrers</Link>
                 </li>
                 <li>
-                  <Link to="/">News</Link>
+                  <Link to="/support">News</Link>
                 </li>
                 <li>
-                  <Link to="/">Corporate</Link>
+                  <Link to="/support">Corporate</Link>
                 </li>
               </ul>
             </div>
@@ -55,16 +55,16 @@ export default function Footer() {
               <h2>Help</h2>
               <ul>
                 <li>
-                  <Link to="/">Host an ecoexperience</Link>
+                  <Link to="/host/welcome">Host an ecoexperience</Link>
                 </li>
                 <li>
-                  <Link to="/">How it works</Link>
+                  <Link to="/support">How it works</Link>
                 </li>
                 <li>
-                  <Link to="/">Support</Link>
+                  <Link to="/support">Support</Link>
                 </li>
                 <li>
-                  <Link to="/">Help Center</Link>
+                  <Link to="/support">Help Center</Link>
                 </li>
               </ul>
             </div>
@@ -73,16 +73,16 @@ export default function Footer() {
               <h2>Legal</h2>
               <ul>
                 <li>
-                  <Link to="/">Terms of Service</Link>
+                  <Link to="/support">Terms of Service</Link>
                 </li>
                 <li>
-                  <Link to="/">Privary policy</Link>
+                  <Link to="/support">Privary policy</Link>
                 </li>
                 <li>
-                  <Link to="/">Cookies policy</Link>
+                  <Link to="/support">Cookies policy</Link>
                 </li>
                 <li>
-                  <Link to="/">Contact</Link>
+                  <Link to="/host/welcome">Contact</Link>
                 </li>
               </ul>
             </div>

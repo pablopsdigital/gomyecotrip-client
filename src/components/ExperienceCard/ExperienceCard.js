@@ -26,13 +26,13 @@ export default function ExperienceCard({experience, ...props}) {
             <div className="content">
               <div className="content-header">
                 <Avatar
-                  alt={experience.hosted ? experience.hosted.name : ''}
+                  alt={experience.hosted ? experience.hosted.hosted.name : ''}
                   src={
-                    experience.hosted ? experience.hosted.imageAvatar : 'https://i.pravatar.cc/500'
+                    experience.hosted ? experience.hosted.hosted.logo : 'https://i.pravatar.cc/500'
                   }
                   sx={{width: 30, height: 30}}
                 />
-                <p> Host: Manolo Fernández </p>
+                <p> Host: {experience.hosted ? experience.hosted.hosted.name : ''} </p>
               </div>
 
               <div className="content-body">

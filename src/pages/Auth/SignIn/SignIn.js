@@ -11,6 +11,8 @@ import Brand from '../../../resources/svg/gomyecotrip-symbol.svg';
 import {signInUser} from '../../../actions/userActions';
 
 import useAuthUserContext from '../../../hooks/useAuthUser';
+import {MdAlternateEmail} from 'react-icons/md';
+import {AiOutlineUser} from 'react-icons/ai';
 
 export default function SignIn(props) {
   //Router
@@ -95,7 +97,7 @@ export default function SignIn(props) {
           <div className="field">
             <div className="field-icon">
               <span className="form-icon">
-                <i className="fa fa-search"></i>
+                <AiOutlineUser />
               </span>
               <input
                 className="input"
@@ -111,7 +113,7 @@ export default function SignIn(props) {
             <div className="field">
               <div className="field-icon">
                 <span className="form-icon">
-                  <i className="fa fa-search"></i>
+                  <MdAlternateEmail />
                 </span>
                 <input
                   className="input"

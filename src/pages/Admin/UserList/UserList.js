@@ -46,10 +46,10 @@ export default function UserList(props) {
       <div id="user-list">
         <div className="header-admin-page">
           <h2 className="title">User list</h2>
-          <Button>
+          {/* <Button>
             <AddIcon />
             Insertar
-          </Button>
+          </Button> */}
         </div>
 
         <div className="content">

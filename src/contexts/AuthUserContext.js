@@ -11,6 +11,11 @@ export default function AuthUserContextProvider({children}) {
   //================================================================
   const [userInfo, setUserInfo] = useState(localStorageManager.getItem('userInfo'));
   const [isAuth, setIsAuth] = useState(localStorageManager.getItem('isAuth'));
+  const [favorites, setFavorites] = useState([]);
+
+  useEffect(() => {
+    setFavorites(JSON.parse(localStorage.getItem('favorites')));
+  }, []);
 
   //================================================================
   //Signin
@@ -18,11 +23,8 @@ export default function AuthUserContextProvider({children}) {
   const signin = useCallback((data) => {
     setUserInfo(data.userInfo);
     setIsAuth(true);
-    // setAuthorizationHeader(data.userInfo); //Header axios
     localStorageManager.setItem('userInfo', data.userInfo);
     localStorageManager.setItem('isAuth', true);
-    // document.location.href = '/';
-    // Navigate('/');
   }, []);
 
   //================================================================
@@ -32,10 +34,28 @@ export default function AuthUserContextProvider({children}) {
     localStorageManager.removeItem('userInfo');
     localStorageManager.removeItem('isAuth');
     localStorageManager.removeItem('userWishlist');
-    // resetHeaderApiClient();//Remove header axios
-    // Navigate('/signin');
     document.location.href = '/';
   };
+
+  //================================================================
+  //Add or delete favorites items
+  //================================================================
+  const addFavorites = useCallback((experience) => {
+    let array = favorites;
+    let addArray = true;
+    array.map((item, index) => {
+      if (item === experience._id) {
+        array.splice(index, 1); //delete item array
+        addArray = false;
+      }
+    });
+    if (addArray) {
+      array.push(experience._id);
+    }
+    setFavorites([...array]);
+
+    localStorageManager.setItem('favorites', array);
+  }, []);
 
   //================================================================
   //Object value
@@ -44,6 +64,8 @@ export default function AuthUserContextProvider({children}) {
     () => ({
       signin,
       signout,
+      favorites,
+      addFavorites,
       isAuth,
       userInfo
     }),

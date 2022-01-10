@@ -3,11 +3,14 @@ import {getAllExperiences} from '../../../actions/experiencesActions';
 import LayoutUserProfile from '../LayoutUserProfile';
 import ExperienceCard from '../../../components/ExperienceCard';
 import './UserSaveExperiences.scss';
+import useAuthUserContext from '../../../hooks/useAuthUser';
 
 export default function UserSaveExperiences() {
   const [experiences, setExperiences] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+
+  const {favorites, addFavorites} = useAuthUserContext();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,9 +36,13 @@ export default function UserSaveExperiences() {
             <h1>Save Experiences</h1>
           </div>
           <ul className="experience-grid">
-            {experiences.slice(0, 5).map((experience, index) => (
-              <ExperienceCard key={experience._id} experience={experience} />
-            ))}
+            {experiences
+              .filter((experience) => {
+                return favorites.includes(experience._id);
+              })
+              .map((experience) => (
+                <ExperienceCard key={experience._id} experience={experience} />
+              ))}
           </ul>
         </div>
       </div>

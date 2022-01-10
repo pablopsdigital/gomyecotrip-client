@@ -6,17 +6,23 @@ import {Avatar, IconButton} from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import useAuthUserContext from '../../hooks/useAuthUser';
 
 export default function ExperienceCard({experience, ...props}) {
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState();
+  const {favorites, addFavorites} = useAuthUserContext();
+
+  const handlerFavorite = () => {
+    addFavorites(experience);
+  };
 
   return (
     <li id="experience-vertical-card">
       <div className="experience-card">
         <div className="header-vertical-card">
           <div className="icon-container">
-            <IconButton className="icon" aria-label="add to favorites">
-              {!isFavorite ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+            <IconButton className="icon" aria-label="add to favorites" onClick={handlerFavorite}>
+              {!favorites.includes(experience._id) ? <FavoriteBorderIcon /> : <FavoriteIcon />}
             </IconButton>
           </div>
         </div>

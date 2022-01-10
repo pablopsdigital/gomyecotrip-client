@@ -9,10 +9,12 @@ import {IconButton} from '@mui/material';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
+import useAuthUserContext from '../../../hooks/useAuthUser';
 
 export default function SliderSection5({experiences, ...props}) {
   const [experiencesList, setExperiencesList] = useState([]);
-  const [isFavorite, setIsFavorite] = useState(false);
+
+  const {favorites, addFavorites} = useAuthUserContext();
 
   //================================================================
   //Glide
@@ -70,13 +72,21 @@ export default function SliderSection5({experiences, ...props}) {
                               backgroundImage: `url(${experience.featuredImage})`
                             }}
                           >
-                            <div className="action-bar">
+                            {/* <div className="action-bar">
                               <div className="icon-container">
-                                <IconButton className="icon" aria-label="add to favorites">
-                                  {!isFavorite ? <FavoriteBorderIcon /> : <FavoriteIcon />}
+                                <IconButton
+                                  className="icon"
+                                  aria-label="add to favorites"
+                                  onClick={() => addFavorites(experience)}
+                                >
+                                  {!favorites.includes(experience._id) ? (
+                                    <FavoriteBorderIcon />
+                                  ) : (
+                                    <FavoriteIcon />
+                                  )}
                                 </IconButton>
                               </div>
-                            </div>
+                            </div> */}
                           </div>
                           <div className="listing-content">
                             <div className="listing-rating">

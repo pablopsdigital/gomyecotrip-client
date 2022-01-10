@@ -5,6 +5,7 @@ import LoadingBox from '../../components/LoadingBox/LoadingBox';
 import MessageBox from '../../components/MessageBox/MessageBox';
 import Hero from './Hero';
 import {useNavigate} from 'react-router-dom';
+import CookieConsent from 'react-cookie-consent';
 
 import moment from 'moment';
 import {getAllExperiences} from '../../actions/experiencesActions';
@@ -68,6 +69,30 @@ export default function Home() {
         {loading && <LoadingBox />}
         {error && <MessageBox variant="danger">{error}</MessageBox>}
       </div>
+      <CookieConsent
+        location="bottom"
+        buttonText="Accept"
+        enableDeclineButton
+        declineButtonStyle={{
+          border: '2px solid white',
+          background: '#671cc9',
+          color: 'white',
+          fontSize: '1rem',
+          borderRadius: '0.5rem'
+        }}
+        cookieName="myAwesomeCookieName2"
+        style={{background: '#671cc9'}}
+        buttonStyle={{
+          background: 'white',
+          color: '#671cc9',
+          fontSize: '1rem',
+          borderRadius: '0.5rem'
+        }}
+        expires={150}
+      >
+        {`The cookie warning is simulated, it does not activate or deactivate any cookies. Our website uses cookies to improve your experience. We'll assume you're ok with this, but
+        you can opt-out if you wish.`}
+      </CookieConsent>
     </Layout>
   );
 }

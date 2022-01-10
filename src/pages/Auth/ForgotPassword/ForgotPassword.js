@@ -2,11 +2,13 @@ import React, {useEffect, useState} from 'react';
 import './ForgotPassword.scss';
 import {useDispatch, useSelector} from 'react-redux';
 import {Link, useLocation} from 'react-router-dom';
-import {signin} from '../../../redux/actions/userActions';
 import LoadingBox from '../../../components/LoadingBox/LoadingBox';
 import MessageBox from '../../../components/MessageBox/MessageBox';
 import {Button} from '../../../components/Button';
 import {useNavigate} from 'react-router-dom';
+import useAuthUserContext from '../../../hooks/useAuthUser';
+import {MdAlternateEmail} from 'react-icons/md';
+import Brand from '../../../resources/svg/gomyecotrip-symbol.svg';
 
 export default function ForgotPassword(props) {
   //Router
@@ -16,10 +18,12 @@ export default function ForgotPassword(props) {
   const redirect = redirectInUrl ? redirectInUrl : '/';
 
   //Data
-  const [email, setEmail] = useState('');
+  const {signin, userInfo} = useAuthUserContext();
 
-  const userSignin = useSelector((state) => state.userSignin);
-  const {userInfo, loading, error} = userSignin;
+  const [email, setEmail] = useState('');
+  //User info
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -37,7 +41,7 @@ export default function ForgotPassword(props) {
         {/* Header ========================================================== */}
         <div>
           <Link to="/" className="brand-container ">
-            <img className="brand-symbol-img signin-brand" src="./gomyecotryp-symbol.svg" alt="" />
+            <img className="brand-symbol-img signin-brand" src={Brand} alt="" />
           </Link>
         </div>
         <p>
@@ -55,7 +59,7 @@ export default function ForgotPassword(props) {
           <div className="field">
             <div className="field-icon">
               <span className="form-icon">
-                <i className="fa fa-search"></i>
+                <MdAlternateEmail />
               </span>
               <input
                 className="input"

@@ -11,11 +11,7 @@ export default function AuthUserContextProvider({children}) {
   //================================================================
   const [userInfo, setUserInfo] = useState(localStorageManager.getItem('userInfo'));
   const [isAuth, setIsAuth] = useState(localStorageManager.getItem('isAuth'));
-  const [favorites, setFavorites] = useState([]);
-
-  useEffect(() => {
-    setFavorites(JSON.parse(localStorage.getItem('favorites')));
-  }, []);
+  const [favorites, setFavorites] = useState(localStorageManager.getItem('favorites'));
 
   //================================================================
   //Signin

@@ -10,14 +10,11 @@ export default function Gallery({experience, ...props}) {
     <>
       <div id="experience-gallery" className="experience-gallery">
         <div>
-          <img src={featuredImage} caption="All you need is a laptop to get started!" />
+          <img src={featuredImage} />
         </div>
         <div>
-          <img src={galleryImgs[0]} caption="All you need is a laptop to get started!" />
+          <img src={galleryImgs[0]} />
         </div>
-        {/* <div>
-          <img src={galleryImgs[1]} caption="All you need is a laptop to get started!" />
-        </div> */}
         <button className="button-all-photos-gallery">Show All</button>
       </div>
     </>

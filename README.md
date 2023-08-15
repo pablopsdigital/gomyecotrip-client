@@ -1,1 +1,0 @@
-# gomyecotrip-client

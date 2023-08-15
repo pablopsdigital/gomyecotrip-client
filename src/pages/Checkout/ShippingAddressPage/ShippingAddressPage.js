@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {saveShippingAddress} from '../../../redux/actions/checkoutActions';
 import './ShippingAddressPage.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { saveShippingAddress } from '../../../redux/actions/checkoutActions';
 
 export default function ShippingAddressPage(props) {
   const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
+  const {userInfo} = userSignin;
 
   const checkout = useSelector((state) => state.checkout);
   console.log('data', checkout);
@@ -15,7 +15,7 @@ export default function ShippingAddressPage(props) {
     address: 'Pontevedra',
     city: 'Sanxnexo',
     postalCode: '45667',
-    country: 'España',
+    country: 'España'
   };
 
   //=======================================================================
@@ -31,9 +31,7 @@ export default function ShippingAddressPage(props) {
   //Controlador envio formulario, se actualiza el estado en el storage
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(
-      saveShippingAddress({ fullName, address, city, postalCode, country })
-    );
+    dispatch(saveShippingAddress({fullName, address, city, postalCode, country}));
   };
 
   //=======================================================================
@@ -43,7 +41,7 @@ export default function ShippingAddressPage(props) {
     <div className="shipping-address-page">
       {/* <CheckoutSteps step1 step2></CheckoutSteps> */}
       <form className="form" onSubmit={submitHandler}>
-        <div vl>
+        <div>
           <h1>Shipping Address</h1>
         </div>
         <div>

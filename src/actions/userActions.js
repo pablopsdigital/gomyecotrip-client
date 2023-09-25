@@ -1,10 +1,3 @@
-import axiosClient, {
-  resetHeaderApiClient,
-  configureHeaderApiClient
-} from '../services/axiosAPIClient';
-import {localStorageManager} from '../services/localStorageManager';
-import userAuthUserContext from '../hooks/useAuthUser';
-
 // Configure params
 const apiVersionUrl = '/api/v1';
 
@@ -14,14 +7,12 @@ export const signUpUser = async (firstName, lastName, email, password) => {
 
   //Save local storage
   // localStorage.setItem('userInfo', JSON.stringify(data.result));
-  // configureHeaderApiClient(data.token);//Header defaults axios all querys
   return data;
 };
 
 export const signInUser = async (email, password, remenberme) => {
   const url = `${apiVersionUrl}/users/signin`;
   const data = await axiosClient.post(url, {email, password});
-  // configureHeaderApiClient(data.token);//Header defaults axios all querys
 
   //Save local storage
   // localStorage.setItem('userInfo', JSON.stringify(data.userInfo));

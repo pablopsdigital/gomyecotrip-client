@@ -1,27 +1,17 @@
-import React, {useState, useEffect, useRef} from 'react';
-import {useSelector} from 'react-redux';
 import {loadStripe} from '@stripe/stripe-js';
-import './BookingForm.scss';
-import {Button} from '../../../components/Button';
-import {BiPlus, BiMinus, BiUserPlus} from 'react-icons/bi';
+import React, {useEffect, useRef, useState} from 'react';
+import {BiMinus, BiPlus, BiUserPlus} from 'react-icons/bi';
 import {FiCalendar} from 'react-icons/fi';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
+import {Button} from '../../../components/Button';
+import './BookingForm.scss';
 
-import moment from 'moment';
-import axios from 'axios';
-import {useNavigate, useParams} from 'react-router-dom';
-import CalendarPicker from '@mui/lab/CalendarPicker';
-import useAuthUserContext from '../../../hooks/useAuthUser';
-import DateAdapter from '@mui/lab/AdapterMoment';
-import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-  KeyboardTimePicker
-} from '@material-ui/pickers';
+import {KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers';
+import 'date-fns';
+import moment from 'moment';
+import {useNavigate, useParams} from 'react-router-dom';
 import {payStripe} from '../../../actions/bookingsActions';
+import useAuthUserContext from '../../../hooks/useAuthUser';
 
 export default function BookingForm({experience, ...props}) {
   //===========================================================================
@@ -160,7 +150,7 @@ export default function BookingForm({experience, ...props}) {
       setLoading(false);
 
       //Send stripe
-      const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+      const stripe = await loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
       const payIntent = stripe.redirectToCheckout({
         sessionId: response.sessionId
       });

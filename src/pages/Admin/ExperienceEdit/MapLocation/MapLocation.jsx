@@ -1,15 +1,13 @@
+import {GoogleMap, LoadScript, Marker, StandaloneSearchBox} from '@react-google-maps/api';
 import React, {useEffect, useRef, useState} from 'react';
-import {LoadScript, GoogleMap, StandaloneSearchBox, Marker} from '@react-google-maps/api';
-import LoadingBox from '../../../../components/LoadingBox/LoadingBox';
-import './MapLocation.scss';
-import {Button} from '../../../../components/Button';
 import MessageBox from '../../../../components/MessageBox/MessageBox';
+import './MapLocation.scss';
 
 const libs = ['places'];
 const defaultLocation = {lat: 41.3873974, lng: 2.168568};
 
 export default function MapLocation({updateAddress, props}) {
-  const googleMapKey = process.env.REACT_APP_GOOGLE_KEY;
+  const googleMapKey = import.meta.env.VITE_GOOGLE_KEY;
   const [mapActive, setMapActive] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);

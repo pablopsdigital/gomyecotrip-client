@@ -1,30 +1,28 @@
-const { off } = require('process');
+const {off} = require('process');
 
 module.exports = {
+  root: true,
   env: {
     browser: true,
     node: true,
-    es2021: true,
+    es2021: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended'
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
-    ecmaVersion: 12,
-    sourceType: 'module',
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react-refresh'],
   rules: {
-    'react/jsx-filename-extension': [
-      2,
-      {
-        extensions: ['.js', '.jsx'],
-      },
-    ],
-    'react/prop-types': 0,
-    'no-unused-vars': 'off',
-    'no-case-declarations': 'off',
-    'no-unused-expressions': 'off',
-  },
+    'react-refresh/only-export-components': ['warn', {allowConstantExport: true}]
+  }
 };

@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
-import './SearchAvailability.scss';
-import Autocomplete from 'react-google-autocomplete';
 import moment from 'moment';
+import React, {useState} from 'react';
+import Autocomplete from 'react-google-autocomplete';
+import './SearchAvailability.scss';
 
 // Icons
-import SearchIcon from '@mui/icons-material/Search';
-import {useNavigate} from 'react-router-dom';
-import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
-import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/pickers';
+import {KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers';
+import SearchIcon from '@mui/icons-material/Search';
+import 'date-fns';
+import {useNavigate} from 'react-router-dom';
 
 export default function SearchAvailability() {
   //Control Date
@@ -43,7 +43,7 @@ export default function SearchAvailability() {
         <div className="container-input">
           <label htmlFor="">Where you want to go</label>
           <Autocomplete
-            apiKey={process.env.REACT_APP_GOOGLE_KEY}
+            apiKey={import.meta.env.VITE_GOOGLE_KEY}
             onPlaceSelected={(place) => {
               handleLocation(place);
             }}

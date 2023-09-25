@@ -1,15 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import './MapGoogle.css';
 
-import {
-  GoogleMap,
-  useJsApiLoader,
-  withScriptjs,
-  withGoogleMap,
-  Marker,
-  InfoWindow,
-  InfoBox
-} from '@react-google-maps/api';
+import {GoogleMap, InfoWindow, Marker, useJsApiLoader} from '@react-google-maps/api';
 import {Button} from '../../../components/Button';
 import customStyleMap from './customStyleMap';
 
@@ -32,7 +24,7 @@ export default function MapGoogle({experiences, ...props}) {
   //=================================================================
   const {isLoaded} = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_KEY
   });
 
   const [map, setMap] = useState(null);

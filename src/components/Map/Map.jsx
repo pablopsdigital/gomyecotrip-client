@@ -1,12 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import MapGL, {NavigationControl, Popup, ScaleControl} from 'react-map-gl';
 import './Map.css';
-import MapGL, {
-  Popup,
-  NavigationControl,
-  FullscreenControl,
-  ScaleControl,
-  GeolocateControl,
-} from 'react-map-gl';
 
 import Pins from './MapPin/MapPin';
 import CityInfo from './MapPopUp/MapPopUp';
@@ -15,13 +9,13 @@ import CITIES from './data-cities.json';
 const navStyle = {
   top: 0,
   left: 0,
-  padding: '10px',
+  padding: '10px'
 };
 
 const scaleControlStyle = {
   bottom: 36,
   right: 0,
-  padding: '10px',
+  padding: '10px'
 };
 
 export default function Map() {
@@ -30,7 +24,7 @@ export default function Map() {
     longitude: -100,
     zoom: 3.5,
     bearing: 0,
-    pitch: 0,
+    pitch: 0
   });
   const [popupInfo, setPopupInfo] = useState(null);
 
@@ -43,7 +37,7 @@ export default function Map() {
         mapStyle="mapbox://styles/mapbox/light-v10"
         onViewportChange={setViewport}
         // eslint-disable-next-line no-undef
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+        mapboxApiAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
       >
         <Pins data={CITIES} onClick={setPopupInfo} />
 

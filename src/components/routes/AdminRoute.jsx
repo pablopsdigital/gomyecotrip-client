@@ -1,6 +1,5 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {Navigate, Redirect, Route} from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import useAuthUserContext from '../../hooks/useAuthUser';
 
 const AdminRoute = (props) => {

@@ -1,6 +1,5 @@
 {
   "name": "frontend",
-  "proxy": "http://localhost/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,6 +23,7 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@vitejs/plugin-react-swc": "^3.3.2",
     "axios": "^0.24.0",
     "date-fns": "^2.28.0",
     "eslint": "^8.4.1",
@@ -43,19 +43,22 @@
     "react-places-autocomplete": "^7.3.0",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.0",
     "sass": "^1.45.1",
     "styled-components": "^5.3.3",
     "uuid": "^8.3.2",
+    "vite": "^4.4.9",
+    "vite-plugin-svgr": "^4.0.0",
+    "vite-tsconfig-paths": "^4.2.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage --watch=false"
   },
   "eslintConfig": {
     "extends": [
@@ -74,5 +77,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^0.34.5",
+    "jsdom": "^22.1.0",
+    "vitest": "^0.34.5"
   }
 }

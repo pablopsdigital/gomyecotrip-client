@@ -1,19 +1,8 @@
 import React, {useCallback, useState} from 'react';
 import './MapExperience.scss';
 
-import {
-  GoogleMap,
-  useJsApiLoader,
-  withScriptjs,
-  withGoogleMap,
-  Marker,
-  InfoWindow,
-  InfoBox
-} from '@react-google-maps/api';
-import {Button} from '../../../components/Button';
-import customStyleMap from '../../../pages/Experiences/MapGoogle/customStyleMap';
-
-import {Link, useParams} from 'react-router-dom';
+import {GoogleMap, Marker, useJsApiLoader} from '@react-google-maps/api';
+import customStyleMap from '../../Experiences/MapGoogle/customStyleMap';
 
 const containerStyle = {
   width: '100%',
@@ -26,7 +15,7 @@ export default function MapExperience({experience, ...props}) {
   //=================================================================
   const {isLoaded} = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: process.env.REACT_APP_GOOGLE_KEY
+    googleMapsApiKey: import.meta.env_VITE_GOOGLE_KEY
   });
 
   const [map, setMap] = useState(null);

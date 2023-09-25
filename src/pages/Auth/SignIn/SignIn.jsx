@@ -1,18 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import './SignIn.scss';
-import {useDispatch, useSelector} from 'react-redux';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
+import './SignIn.scss';
 // import { signin } from '../../../redux/actions/userActions';
+import {signInUser} from '../../../actions/userActions';
+import {Button} from '../../../components/Button';
 import LoadingBox from '../../../components/LoadingBox/LoadingBox';
 import MessageBox from '../../../components/MessageBox/MessageBox';
-import {Button} from '../../../components/Button';
-import ToggleSwitch from '../../../components/ToggleSwitch/ToggleSwitch.js';
+import ToggleSwitch from '../../../components/ToggleSwitch/ToggleSwitch.jsx';
 import Brand from '../../../resources/svg/gomyecotrip-symbol.svg';
-import {signInUser} from '../../../actions/userActions';
 
-import useAuthUserContext from '../../../hooks/useAuthUser';
-import {MdAlternateEmail} from 'react-icons/md';
 import {AiOutlineUser} from 'react-icons/ai';
+import {MdAlternateEmail} from 'react-icons/md';
+import useAuthUserContext from '../../../hooks/useAuthUser';
 
 export default function SignIn(props) {
   //Router

@@ -1,30 +1,16 @@
 /* eslint-disable no-undef */
-import React, {useEffect, useState} from 'react';
-import './Checkout.css';
-import {useDispatch, useSelector} from 'react-redux';
-import {createBooking} from '../../redux/actions/bookingActions';
-import {Link} from 'react-router-dom';
-import {BOOKING_CREATE_RESET} from '../../redux/constants/bookingConstants';
-import LoadingBox from '../../components/LoadingBox/LoadingBox';
-import MessageBox from '../../components/MessageBox/MessageBox';
-import Layout from '../../components/Layout/Layout';
-import {Button} from '../../components/Button';
-import ReviewStartCount from '../../components/ReviewStartAndCount/ReviewStartAndCount';
-import {BsArrowLeft} from 'react-icons/bs';
-import ShippingAddressPage from './ShippingAddressPage/ShippingAddressPage';
-import PaymentMethodPage from './PaymentMethodPage/PaymentMethodPage';
-import PayPal from './PayPal/PayPal';
-import StripeCheckoutForm from './StripeCheckoutForm/StripeCheckoutForm';
+import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
-import {
-  Elements,
-  CardElement,
-  useStripe,
-  PaymentElement,
-  StripeProvider,
-  useElements
-} from '@stripe/react-stripe-js';
-import {useNavigate} from 'react-router-dom';
+import React from 'react';
+import {BsArrowLeft} from 'react-icons/bs';
+import {useSelector} from 'react-redux';
+import {Link, useNavigate} from 'react-router-dom';
+import Layout from '../../components/Layout/Layout';
+import ReviewStartCount from '../../components/ReviewStartAndCount/ReviewStartAndCount';
+import './Checkout.css';
+import PaymentMethodPage from './PaymentMethodPage/PaymentMethodPage';
+import ShippingAddressPage from './ShippingAddressPage/ShippingAddressPage';
+import StripeCheckoutForm from './StripeCheckoutForm/StripeCheckoutForm';
 
 export default function Checkout({match, ...props}) {
   const navigate = useNavigate();
@@ -64,7 +50,7 @@ export default function Checkout({match, ...props}) {
 
       console.log(response.data);
 
-      const stripe = await loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+      const stripe = await loadStripe(import.meta.env_VITE_STRIPE_PUBLISHABLE_KEY);
       stripe.redirectToCheckout({
         sessionId: response.data.sessionId
       });

@@ -1,23 +1,15 @@
-import React, {useEffect, useState} from 'react';
-import './BookingList.scss';
-import {useDispatch, useSelector} from 'react-redux';
-import {deleteBooking, listBookings} from '../../../redux/actions/bookingActions';
-import LoadingBox from '../../../components/LoadingBox/LoadingBox';
-import MessageBox from '../../../components/MessageBox/MessageBox';
-import {BOOKING_DELETE_RESET} from '../../../redux/constants/bookingConstants';
-import Layout from '../../../components/Layout/Layout';
-import LayoutAdmin from '../../../pages/Admin/Dashboard/LayoutAdmin';
-import {Button} from '../../../components/Button';
-import axios from 'axios';
+import {Modal} from '@mui/material';
 import moment from 'moment';
+import React, {useEffect, useState} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
 import {changeBookingState, getAllBookings} from '../../../actions/bookingsActions';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import {Button} from '../../../components/Button';
+import LoadingBox from '../../../components/LoadingBox/LoadingBox';
+import MessageBox from '../../../components/MessageBox/MessageBox';
 import NoResultsFound from '../../../components/NoResultsFound/NoResultsFound';
-import AddIcon from '@mui/icons-material/Add';
-import {Modal} from '@mui/material';
 import useAuthUserContext from '../../../hooks/useAuthUser';
+import LayoutAdmin from '../Dashboard/LayoutAdmin';
+import './BookingList.scss';
 
 export default function BookingList(props) {
   //UserInfo

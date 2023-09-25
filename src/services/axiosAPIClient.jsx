@@ -1,8 +1,7 @@
 import axios from 'axios';
-import store from '../redux/store';
 
 const ApiClient = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL
+  baseURL: import.meta.env.VITE_API_BASE_URL
 });
 
 ApiClient.interceptors.response.use(
